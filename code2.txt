@@ -1,0 +1,14 @@
+x_1 = 12;
+test_12 = 2.2e5;
+while (x_1 > 1)
+    do
+	{
+        x_1 = x_1 + 1;
+        test_12 = test_12 * x_1;
+	}
+    while(test_12 < 200);
+    if (test_12 >= 198 # !(x_1 < 10))
+        print(test_12 + x_1);
+    else
+        print(test_12 - x_1);
+        

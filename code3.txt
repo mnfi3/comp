@@ -1,0 +1,6 @@
+x_1 = 12;
+test_12 = 2.2e5;
+if (test_12 >= 198 # !(x_1 < 10))
+      test_12  = test_12 +1;
+    else
+       test_12  = test_12 -1;
