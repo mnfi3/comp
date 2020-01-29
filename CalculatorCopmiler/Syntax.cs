@@ -14,7 +14,7 @@ namespace CopmilerProject
         Token last_token;
         List<Error> errors = new List<Error>();
         Stack stack = new Stack();
-        ProgramBlock pb = new ProgramBlock();
+        public ProgramBlock pb = new ProgramBlock();
 
 
 
@@ -47,7 +47,6 @@ namespace CopmilerProject
             {
                 stmts();
                 pb.append("halt", "", "", "");
-                MessageBox.Show(pb.toString());
             }
 
         }
@@ -410,7 +409,7 @@ namespace CopmilerProject
         {
             int ind = int.Parse(stack.pop());
             string t = stack.pop();
-            pb.append("jmp", "", "", ind.ToString());
+            pb.append("jmp", "", "", (ind-1).ToString());
             int jmp_adr = pb.getI();
             pb.set(ind, "jmpf", t, "", jmp_adr.ToString());
         }

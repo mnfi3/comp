@@ -98,9 +98,16 @@ namespace CopmilerProject
                 txt_result.Text += ">>  ";
             }
 
+        }
 
+        private void btn_pb_Click(object sender, EventArgs e)
+        {
+            txt_pb_code.Text = syntaxAnalyzer.pb.toString();
+        }
 
-           
+        private void btn_run_Click(object sender, EventArgs e)
+        {
+            txt_result.Text = ">> code running started\n\n" + syntaxAnalyzer.pb.run() + "\n >> code running finished";
         }
 
 

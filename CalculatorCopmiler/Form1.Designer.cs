@@ -31,9 +31,11 @@
             this.txt_code = new System.Windows.Forms.RichTextBox();
             this.txt_tokens = new System.Windows.Forms.RichTextBox();
             this.txt_result = new System.Windows.Forms.RichTextBox();
-            this.txt_stack_code = new System.Windows.Forms.RichTextBox();
+            this.txt_pb_code = new System.Windows.Forms.RichTextBox();
             this.btn_lexical = new System.Windows.Forms.Button();
             this.btn_syntax = new System.Windows.Forms.Button();
+            this.btn_pb = new System.Windows.Forms.Button();
+            this.btn_run = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_code
@@ -65,18 +67,18 @@
             this.txt_result.TabIndex = 3;
             this.txt_result.Text = "";
             // 
-            // txt_stack_code
+            // txt_pb_code
             // 
-            this.txt_stack_code.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txt_stack_code.Location = new System.Drawing.Point(754, 47);
-            this.txt_stack_code.Name = "txt_stack_code";
-            this.txt_stack_code.Size = new System.Drawing.Size(214, 594);
-            this.txt_stack_code.TabIndex = 4;
-            this.txt_stack_code.Text = "";
+            this.txt_pb_code.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txt_pb_code.Location = new System.Drawing.Point(754, 47);
+            this.txt_pb_code.Name = "txt_pb_code";
+            this.txt_pb_code.Size = new System.Drawing.Size(214, 594);
+            this.txt_pb_code.TabIndex = 4;
+            this.txt_pb_code.Text = "";
             // 
             // btn_lexical
             // 
-            this.btn_lexical.Location = new System.Drawing.Point(289, 12);
+            this.btn_lexical.Location = new System.Drawing.Point(225, 12);
             this.btn_lexical.Name = "btn_lexical";
             this.btn_lexical.Size = new System.Drawing.Size(118, 23);
             this.btn_lexical.TabIndex = 5;
@@ -86,7 +88,7 @@
             // 
             // btn_syntax
             // 
-            this.btn_syntax.Location = new System.Drawing.Point(440, 12);
+            this.btn_syntax.Location = new System.Drawing.Point(359, 12);
             this.btn_syntax.Name = "btn_syntax";
             this.btn_syntax.Size = new System.Drawing.Size(118, 23);
             this.btn_syntax.TabIndex = 6;
@@ -94,14 +96,36 @@
             this.btn_syntax.UseVisualStyleBackColor = true;
             this.btn_syntax.Click += new System.EventHandler(this.btn_syntax_Click);
             // 
+            // btn_pb
+            // 
+            this.btn_pb.Location = new System.Drawing.Point(494, 12);
+            this.btn_pb.Name = "btn_pb";
+            this.btn_pb.Size = new System.Drawing.Size(118, 23);
+            this.btn_pb.TabIndex = 7;
+            this.btn_pb.Text = "program block";
+            this.btn_pb.UseVisualStyleBackColor = true;
+            this.btn_pb.Click += new System.EventHandler(this.btn_pb_Click);
+            // 
+            // btn_run
+            // 
+            this.btn_run.Location = new System.Drawing.Point(630, 12);
+            this.btn_run.Name = "btn_run";
+            this.btn_run.Size = new System.Drawing.Size(118, 23);
+            this.btn_run.TabIndex = 8;
+            this.btn_run.Text = "run";
+            this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 647);
+            this.Controls.Add(this.btn_run);
+            this.Controls.Add(this.btn_pb);
             this.Controls.Add(this.btn_syntax);
             this.Controls.Add(this.btn_lexical);
-            this.Controls.Add(this.txt_stack_code);
+            this.Controls.Add(this.txt_pb_code);
             this.Controls.Add(this.txt_result);
             this.Controls.Add(this.txt_tokens);
             this.Controls.Add(this.txt_code);
@@ -116,9 +140,11 @@
         private System.Windows.Forms.RichTextBox txt_code;
         private System.Windows.Forms.RichTextBox txt_tokens;
         private System.Windows.Forms.RichTextBox txt_result;
-        private System.Windows.Forms.RichTextBox txt_stack_code;
+        private System.Windows.Forms.RichTextBox txt_pb_code;
         private System.Windows.Forms.Button btn_lexical;
         private System.Windows.Forms.Button btn_syntax;
+        private System.Windows.Forms.Button btn_pb;
+        private System.Windows.Forms.Button btn_run;
     }
 }
 
